@@ -19,3 +19,28 @@
    --subtle-accent-color: #789961; /* Muted Matcha */
    --shadow-color: rgba(255, 255, 255, 0.1);
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+h1, h2, h3 {
+            font-family: 'Onest', sans-serif;
+            font-weight: 800;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+        }
