@@ -1,173 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Carolina Nzundu">
   <title>The Inclusive Bakery | Designed for Neurodivergence</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Onest:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Onest:wght@100..900&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css">
-
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <!-- Skip to Content Link -->
-   <a href="#main-content" class="skip-link" style="position: absolute; left: -9999px; z-index: 50; padding: 0.75rem; background-color: white; color: var(--color-text); border-radius: 0.25rem; font-weight: 600;">Skip to Content</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-   <!-- Header & Navigation -->
-
-   <header class="main-header">
+  <!-- Header -->
+  <header class="main-header">
     <div class="header-content-container">
       <h1 class="logo">The Inclusive Bakery</h1>
-      <nav class="navigation">
-            <a href="#menu" class="nav-link">Menu</a>
-            <a href="#about" class="nav-link">Our Mission</a>
-            <a href="#contact" class="nav-link">Contact</a>
+      <nav class="navigation" aria-label="Main Navigation">
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#about" class="nav-link">Our Mission</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-    <!-- Theme Toggle and Mobile Menu Button -->
-     <div class="header-right">
-      <button id="themeToggle" onclick="toggleTheme()" class="header-btn">Toggle Theme</button>
-      <button class="mobile-menu-icon" style="display: none;">
-        ☰
-      </button>
-     </div>
+      <!-- Theme Toggle -->
+      <div class="header-right">
+        <button id="themeToggle" onclick="toggleTheme()" class="header-btn" aria-pressed="false" aria-label="Toggle between light and dark mode">Toggle Theme</button>
+      </div>
     </div>
-   </header>
+  </header>
 
-   <main id="main-content">
-
+  <main id="main-content">
     <!-- Hero Section -->
-     <section class="hero-section-container">
+    <section class="hero-section-container">
       <div class="hero-content">
         <p class="hero-subtitle">Welcome to Our Safe Space</p>
-        <h2>Baked with Care, <br>Designed for Clarity.</h2>
-        <p class="hero-description">We create delicious treats and a welcoming digital experience optimised for neurodivergent users. Simple layouts, clear fonts, and minimal visual noise.</p>
-        <a href="#menu" class="header-btn" style="display: inline-block;">Explore the Menu</a>
+        <h2>Baked with Care,<br>Designed for Clarity.</h2>
+        <p class="hero-description">
+          We create delicious treats and a welcoming digital experience optimised for neurodivergent users — simple layouts, clear fonts, and minimal visual noise.
+        </p>
+        <a href="#menu" class="header-btn">Explore the Menu</a>
       </div>
       <div class="hero-image-container">
         <img src="image/BakeryHero.webp" alt="A display case full of pastries and baked goods in a clean, well-lit bakery." class="hero-image">
       </div>
-     </section>
+    </section>
 
-     <!-- Menu Section -->
-     <section id="menu" class="section-padding-container">
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding-container">
       <h2 class="section-header">Our Daily Offers!</h2>
 
       <div class="menu-grid">
-        <!-- Item 1 -->
-         <div class="menu-card">
+        <div class="menu-card">
           <h3>Clarity Croissant</h3>
-          <p>A simple, flaky pastry. Made with minimal ingredients for a predictable texture and taste.</p>
+          <p>A simple, flaky pastry made with minimal ingredients for a predictable texture and taste.</p>
           <p class="price">£3.00</p>
-         </div>
-
-        <!-- Item 2 -->
-          <div class="menu-card">
-          <h3>Focus Brownie</h3>
-          <p>Rich, fudgy, and gluten-free. Clearly marked allergens to prevent anxiety and confusion</p>
-          <p class="price">£4.00</p>
-         </div>
-        <!-- Item 3 -->
-          <div class="menu-card">
-          <h3>Matcha Loaf</h3>
-          <p>Subtle sweetness with a hint of green tea. The gentle color matches our subtle accent tone.</p>
-          <p class="price">£5.00</p>
-         </div>
-      </div>
-     </section>
-
-     <!-- About Section -->
-      <section id="about" class="about-section-padding">
-        <div class="container">
-          <h2 class="section-header" style="margin-bottom: 2rem;">Why Inclusive Design?</h2>
-          <p>For individuals with <strong>Dyslexia</strong>, the font choice ('Lexend') minimises letter confusion and crowding. For those with <strong>ADHD</strong>, the low contrast palette, large text, and organised layout reduces sensory overload, making the website easier to process and navigate.</p>
-          <p class="about-highlight">Our mission is to prove that great design is inherently accessible design.</p>
         </div>
-      </section>
 
-     <!-- Contact Section -->
-     <section id="contact" class="section-padding-container">
+        <div class="menu-card">
+          <h3>Focus Brownie</h3>
+          <p>Rich, fudgy, and gluten-free. Clearly marked allergens reduce anxiety and confusion.</p>
+          <p class="price">£4.00</p>
+        </div>
+
+        <div class="menu-card">
+          <h3>Matcha Loaf</h3>
+          <p>Subtle sweetness with a hint of green tea. The gentle colour matches our accent tone.</p>
+          <p class="price">£5.00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section-padding">
+      <div class="container">
+        <h2 class="section-header">Why Inclusive Design?</h2>
+        <p>
+          For individuals with <strong>Dyslexia</strong>, the font choice <em>Lexend</em> minimises letter confusion and crowding. For those with <strong>ADHD</strong>, the low-contrast palette, large text, and organised layout reduce sensory overload, making the website easier to process and navigate.
+        </p>
+        <p class="about-highlight">Our mission is to prove that great design is inherently accessible design.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding-container">
       <h2 class="section-header">Contact Us</h2>
-      <form class="contact-form">
+      <form class="contact-form" aria-label="Contact Form">
         <div class="form-group">
           <label for="name" class="form-label">Name</label>
           <input type="text" id="name" class="form-input" placeholder="Your Name" required>
         </div>
         <div class="form-group">
-          <label for="message" class="form-label">Message </label>
+          <label for="message" class="form-label">Message</label>
           <textarea id="message" rows="4" class="form-textarea" placeholder="How can we help?" required></textarea>
         </div>
         <button type="submit" class="header-btn" style="width: 100%; font-size: 1.25rem;">Send Inquiry</button>
       </form>
-     </section>
-   </main>
-     <!-- Footer Section -->
-   <footer class="main-footer">
-    <p class="footer-text">&copy; 2025 The Inclusive Bakey. Designed with Neurodivergence in Mind.</p>
-   </footer>
-   
-     <!-- JavaScript -->
-      <script>
-        
-        (function() {
-            const themeToggle = document.getElementById('themeToggle');
-            const body = document.body;
+    </section>
+  </main>
 
-            function initializeTheme() {
-                const storedTheme = localStorage.getItem('theme');
-                if (storedTheme) {
-                    
-                    body.setAttribute('data-theme', storedTheme);
-                } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    
-                    body.setAttribute('data-theme', 'dark');
-                } else {
-                  
-                    body.setAttribute('data-theme', 'light');
-                }
-                updateButtonText(body.getAttribute('data-theme'));
-            }
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p class="footer-text">&copy; 2025 The Inclusive Bakery. Designed with Neurodivergence in Mind.</p>
+  </footer>
 
-            window.toggleTheme = function() {
-                const currentTheme = body.getAttribute('data-theme');
-                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-                
-                body.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-                updateButtonText(newTheme);
-            }
+  <!-- JavaScript -->
+  <script>
+    (function() {
+      const themeToggle = document.getElementById('themeToggle');
+      const body = document.body;
 
-            function updateButtonText(currentTheme) {
-                if (currentTheme === 'dark') {
-                    themeToggle.textContent = 'Switch to Light Mode';
-                } else {
-                    themeToggle.textContent = 'Switch to Dark Mode';
-                }
-            }
-            
-            const skipLink = document.querySelector('.skip-link');
-            skipLink.addEventListener('focus', function() {
-                this.style.left = '0';
-                this.style.top = '0';
-                this.style.backgroundColor = 'var(--color-accent)'; /* Make it visible on focus */
-                this.style.color = 'var(--color-background)';
-            });
-            skipLink.addEventListener('blur', function() {
-                this.style.left = '-9999px';
-                this.style.top = 'auto';
-                this.style.backgroundColor = 'white'; // Reset
-                this.style.color = 'var(--color-text)'; // Reset
-            });
+      function initializeTheme() {
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+          body.setAttribute('data-theme', storedTheme);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          body.setAttribute('data-theme', 'dark');
+        } else {
+          body.setAttribute('data-theme', 'light');
+        }
+        updateButtonText(body.getAttribute('data-theme'));
+      }
 
+      window.toggleTheme = function() {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateButtonText(newTheme);
+        themeToggle.setAttribute('aria-pressed', newTheme === 'dark');
+      }
 
-          
-            initializeTheme();
-        })();
-    </script>
- </body>
+      function updateButtonText(currentTheme) {
+        themeToggle.textContent = currentTheme === 'dark'
+          ? 'Switch to Light Mode'
+          : 'Switch to Dark Mode';
+      }
+
+      const skipLink = document.querySelector('.skip-link');
+      skipLink.addEventListener('focus', function() {
+        this.style.left = '1rem';
+        this.style.top = '1rem';
+      });
+      skipLink.addEventListener('blur', function() {
+        this.style.left = '-9999px';
+      });
+
+      initializeTheme();
+    })();
+  </script>
+</body>
 </html>
