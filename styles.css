@@ -1,0 +1,21 @@
+/* Colour Palettes */
+:root{
+/* Default Light Theme */
+--background-color: #E6E2D7; /* Milk */
+--text-color: #3F1D0E;       /* Coffee */
+--accent-color: #A2663C;     /* Caramel (Primary Call to Action) */
+--secondary-color: #E4CDB0;  /* Cream (Card/Section Background) */
+--subtle-accent-color: #ABBF9B; /* Matcha (Borders/Subtle Details) */
+--shadow-color: rgba(63, 29, 14, 0.2);
+--transition-duration: 0.3s;
+}
+
+/* Dark Theme after Toggle */
+[data-theme="dark"] {
+   --background-color: #1e1b19; /* Deep Dark Brown */
+   --text-color: #F3F1ED;       /* Near White (Low-contrast to background) */
+   --accent-color: #D7A87A;     /* Soft Caramel (Still the accent) */
+   --secondary-color: #2C2825;  /* Dark Cream/Border (Card Background) */
+   --subtle-accent-color: #789961; /* Muted Matcha */
+   --shadow-color: rgba(255, 255, 255, 0.1);
+}
