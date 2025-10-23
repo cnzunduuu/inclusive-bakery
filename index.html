@@ -85,7 +85,7 @@
       <section id="about" class="about-section-padding">
         <div class="container">
           <h2 class="section-header" style="margin-bottom: 2rem;">Why Inclusive Design?</h2>
-          <p>For individuals with <strong>Dyslexia</strong>, the font choice ('Lexend') minimises letter confusion and crowding. For thos with <strong>ADHD</strong>, the low contrast palette, large text, and organised layout reduces sensory overload, making the website easier to process and navigate.</p>
+          <p>For individuals with <strong>Dyslexia</strong>, the font choice ('Lexend') minimises letter confusion and crowding. For those with <strong>ADHD</strong>, the low contrast palette, large text, and organised layout reduces sensory overload, making the website easier to process and navigate.</p>
           <p class="about-highlight">Our mission is to prove that great design is inherently accessible design.</p>
         </div>
       </section>
@@ -106,10 +106,68 @@
       </form>
      </section>
    </main>
-
+     <!-- Footer Section -->
    <footer class="main-footer">
     <p class="footer-text">&copy; 2025 The Inclusive Bakey. Designed with Neurodivergence in Mind.</p>
    </footer>
+   
+     <!-- JavaScript -->
+      <script>
+        
+        (function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const body = document.body;
 
+            function initializeTheme() {
+                const storedTheme = localStorage.getItem('theme');
+                if (storedTheme) {
+                    
+                    body.setAttribute('data-theme', storedTheme);
+                } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    
+                    body.setAttribute('data-theme', 'dark');
+                } else {
+                  
+                    body.setAttribute('data-theme', 'light');
+                }
+                updateButtonText(body.getAttribute('data-theme'));
+            }
+
+            window.toggleTheme = function() {
+                const currentTheme = body.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                body.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateButtonText(newTheme);
+            }
+
+            function updateButtonText(currentTheme) {
+                if (currentTheme === 'dark') {
+                    themeToggle.textContent = 'Switch to Light Mode';
+                } else {
+                    themeToggle.textContent = 'Switch to Dark Mode';
+                }
+            }
+            
+            const skipLink = document.querySelector('.skip-link');
+            skipLink.addEventListener('focus', function() {
+                this.style.left = '0';
+                this.style.top = '0';
+                this.style.backgroundColor = 'var(--color-accent)'; /* Make it visible on focus */
+                this.style.color = 'var(--color-background)';
+            });
+            skipLink.addEventListener('blur', function() {
+                this.style.left = '-9999px';
+                this.style.top = 'auto';
+                this.style.backgroundColor = 'white'; // Reset
+                this.style.color = 'var(--color-text)'; // Reset
+            });
+
+
+          
+            initializeTheme();
+        })();
+    </script>
  </body>
 </html>
